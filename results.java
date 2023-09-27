@@ -11,14 +11,13 @@ public class results {
         int[] marks2 = new int[4];
         int[] marks3 = new int[4];
         int[] totals = new int[4];
-        String[] result = new String[4]; // Keep "RESULT" as a string
+        String[] result = new String[4];
         double[] average = new double[4];
         String[] grades = new String[4];
 
         for (int i = 0; i < 4; i++) {
             System.out.println("Enter details for Student " + (i + 1));
             
-            // Prompt for roll number as a string and then parse it into an integer
             System.out.print("Enter Roll Number: ");
             String rollNoStr = scanner.nextLine();
             rollNo[i] = Integer.parseInt(rollNoStr);
@@ -35,10 +34,10 @@ public class results {
             System.out.print("Enter marks for subject 3: ");
             marks3[i] = scanner.nextInt();
             
-            scanner.nextLine(); // Consume the newline character left in the buffer
+            scanner.nextLine(); 
             
-            System.out.print("Enter RESULT: "); // Prompt for "RESULT"
-            result[i] = scanner.nextLine(); // Store "RESULT" as a string
+            System.out.print("Enter RESULT: "); 
+            result[i] = scanner.nextLine();
             
             totals[i] = marks1[i] + marks2[i] + marks3[i];
             average[i] = (double) totals[i] / 3;
